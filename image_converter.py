@@ -1,14 +1,14 @@
 import os
 from PIL import Image
 from pillow_heif import register_heif_opener
+from tqdm import tqdm  # Library for the visual progress bar
 
-# Enables HEIC support (Required for iPhone photos)
+# This allows the Pillow library to "understand" HEIC files from iPhones
 register_heif_opener()
 
 # --- GLOBAL SETTINGS ---
 # 1. Update the source directory folder containing your images 
 SOURCE_DIRECTORY = r"FILE_PATH_TO_FOLDER_OF_FILES_TO_CONVERT" # <--- Update the text in the quotes
-
 # 2. Choose Input and Output Formats
 # Common choices: .heic, .jpg, .png, .webp, .bmp, .tiff
 FROM_EXT = ".heic"
